@@ -14,7 +14,7 @@ function Veggie() {
   }, []);
 
   const getVeggie = async () => {
-    const check = localStorage.getItem('veggie');
+    const check = localStorage.getItem('vegetarian');
 
     if (check) {
       setVeggie(JSON.parse(check));
@@ -24,9 +24,9 @@ function Veggie() {
       );
       const data = await api.json();
 
-      localStorage.setItem('veggie', JSON.stringify(data.recipes))
+      localStorage.setItem('vegetarian', JSON.stringify(data.recipes))
       setVeggie(data.recipes);
-      // console.log(data);
+      console.log(data);
     }
   }
 
