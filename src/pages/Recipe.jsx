@@ -43,7 +43,7 @@ function Recipe() {
             </ul>
             )}
         </Info>
-    </DetailWrapper>
+    </DetailWrapper> 
   )
 }
 
@@ -51,7 +51,18 @@ const DetailWrapper = styled.div`
 margin-top: 10rem;
 margin-bottom: 5rem;
 display: flex;
-
+@media(max-width:768px){
+    display: grid;
+    justify-content: center;
+    grid-gap: 5rem;
+    width: 98%;
+    margin: auto;
+}
+@media(max-width:600px){
+div,img,ul {
+        width: 20rem;
+    }
+}
 .active {
     background: linear-gradient(35deg, #494949, #313131);
     color: white;
@@ -79,7 +90,10 @@ text-align: center;
 `;
 
 const Info = styled.div`
-margin-left: 10rem;
+margin-left: 7rem;
+@media(max-width:768px){
+margin: 0;
+}
 `;
 
 export default Recipe;
